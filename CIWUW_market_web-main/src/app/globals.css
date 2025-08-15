@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ciwuw-green: #146C43;
+  --ciwuw-green-dark: #0d5233;
+  --ciwuw-green-light: #16a085;
+}
+
+/* CIWUW Brand Colors */
+.text-ciwuw-green {
+  color: var(--ciwuw-green);
+}
+
+.bg-ciwuw-green {
+  background-color: var(--ciwuw-green);
+}
+
+.border-ciwuw-green {
+  border-color: var(--ciwuw-green);
+}
+
+/* Custom hover effects */
+.hover-lift {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Custom gradients */
+.gradient-ciwuw {
+  background: linear-gradient(135deg, var(--ciwuw-green) 0%, var(--ciwuw-green-light) 100%);
+}
+
+/* Typography consistent with main CIWUW platform */
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Form styling to match CIWUW aesthetic */
+.form-input {
+  @apply mt-1 block w-full border-gray-300 rounded-md shadow-sm;
+  @apply focus:ring-2 focus:ring-offset-2;
+  border-color: #d1d5db;
+}
+
+.form-input:focus {
+  border-color: var(--ciwuw-green);
+  box-shadow: 0 0 0 3px rgba(20, 108, 67, 0.1);
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Platform preview styling */
+.platform-preview {
+  background: linear-gradient(135deg, #f6f6f6 0%, #e8e8e8 100%);
+  border: 2px solid var(--ciwuw-green);
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
